@@ -34,18 +34,8 @@
 }
 
 
-.search{
-width:30%;
-}
 
-.search input{
-border: none;
-outline: none;
-padding:5px;
-width:90%;
-border-radius:10px;
-padding-left:10px;
-}
+
 
 .title{
     cursor: pointer;
@@ -100,37 +90,7 @@ padding-left:10px;
     }
 }
 
-.searching{
-    background-color: rgba(0, 0, 0, 0.815);
-    width:100%;
-    height:100%;
-    position: absolute;
-    top:0px;
-    left:0px;
-    z-index:10;
-    position: fixed;
 
-    button{
-        border-radius:100%;
-        padding:10px;
-        border: none;
-        outline: none;
-        font-size:2rem;
-        color: white;
-        background-color: black;
-        cursor: pointer;
-    }
-
-    input{
-        padding:20px;
-        border: none;
-        outline: none;
-        background-color: rgba(0, 0, 0, 0);
-        border-bottom:2px solid white;
-        color: white;
-        font-size:2rem;
-    }
-}
 
 .numberOfCarts{
     background-color: rgb(29, 29, 29);

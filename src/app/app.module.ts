@@ -6,7 +6,6 @@ import { ProductListComponent } from './pages/product/product-list/product-list.
 import { ProductDetailsComponent } from './pages/product/product-details/product-details.component';
 import { ProductItemComponent } from './pages/product/product-item/product-item.component';
 import { CartProductsComponent } from './pages/cart/cart-products/cart-products.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +20,6 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AccountUserComponent } from './pages/account-user/account-user.component';
-import { DropdownMenuComponent } from './shared/dropdown-menu/dropdown-menu.component';
 import { CardComponent } from './components/card/card.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
@@ -32,13 +30,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ProductDetailsComponent,
     ProductItemComponent,
     CartProductsComponent,
-    NotFoundComponent,
     HeaderComponent,
     FooterComponent,
     LoginComponent,
     RegisterComponent,
     AccountUserComponent,
-    DropdownMenuComponent,
     CardComponent
   ],
   imports: [
