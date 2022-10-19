@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { WATCH } from 'src/app/core/models/watch.model';
@@ -10,11 +11,11 @@ import { selectorWatches } from 'src/app/core/service/selectors/select.watches';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-
+pageSize=6;
 currentItems:number=1;
 watches:any;
 itemsWatches:WATCH[]=[];
-
+length=0;
   constructor(public Store :Store , private rout:ActivatedRoute) { }
   ngOnInit(): void {
 
@@ -32,8 +33,10 @@ itemsWatches:WATCH[]=[];
     this.Store.select(selectorWatches).subscribe((it)=>{
           this.watches=it;
         })
-      }
 
+      }
+      this.GetItems(0,this.pageSize)
+      this.length=Math.round(this.watches.length/this.pageSize)
     })
 
 
@@ -42,10 +45,19 @@ itemsWatches:WATCH[]=[];
   }
  
 
-GetItems():void{
-this.itemsWatches=this.watches.Items.Watches;
+GetItems(start:number,end:number):void{
+this.itemsWatches=this.watches.slice(start,end)
   }
 
+
+  pageChange(page:PageEvent){
+
+let current = page.pageIndex;
+this.pageSize=page.pageSize;
+let start=current*this.pageSize;
+let end = current*this.pageSize+this.pageSize;
+  this.GetItems(start,end)
+  }
 
 
 

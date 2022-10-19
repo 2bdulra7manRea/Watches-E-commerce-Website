@@ -9,9 +9,9 @@ import { selectorWatches } from 'src/app/core/service/selectors/select.watches';
 })
 export class HomePageComponent implements OnInit {
 watches:any;
-hour:number=0;
-minuts:number=0;
-second:number=0;
+hour:string="";
+minuts:string="";
+second:string="";
 Time:string='';
   constructor(private Store:Store) {
     
@@ -26,11 +26,11 @@ this.watches=v.slice(0,6);
 
 
 this.Time=moment().format('ddd. D MMM YYYY')
+
     setInterval(()=>{
-let date=new Date();
-      this.second=date.getSeconds();
-      this.hour=date.getHours();
-      this.minuts=date.getMinutes();
+      this.second= moment().format('ss');
+      this.hour= moment().format('hh');
+      this.minuts= moment().format('mm');
 
     },1000)
 

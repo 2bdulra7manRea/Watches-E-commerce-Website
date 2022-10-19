@@ -21,7 +21,7 @@
         <tbody>
           <tr *ngFor="let item of cartItems">
             <td class="img">
-              <img src="../../../../assets/imgs/wa1.jpg" alt="photo" />
+              <img [src]="item.imgUrl?item.imgUrl:'../../../../assets/imgs/wa1.jpg'" alt="photo" />
             </td>
             <td>
               {{ item.Product.name }}
@@ -35,7 +35,7 @@
               <button (click)="DeleteQuntity(item)">-</button>
             </td>
             <td>{{ item.priceOfProducts | currency: "USD" }}</td>
-            <td><button>Delete</button></td>
+            <td><button class="delete-btn">Delete</button></td>
           </tr>
         </tbody>
       </table>

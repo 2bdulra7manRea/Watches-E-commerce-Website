@@ -5,6 +5,7 @@ import { cartItemModel } from 'src/app/core/models/cart.item.model';
 import { WATCH } from 'src/app/core/models/watch.model';
 import { selectCarts } from 'src/app/core/service/selectors/select.watches';
 import { AddToCart } from 'src/app/core/service/_actions/watches.actions';
+import {MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
@@ -14,8 +15,8 @@ export class ProductItemComponent implements OnInit {
 nm:number=1;
 flag:boolean=false;
 Fheart=faHeart;
-@Input() watch:WATCH={name:'',id:'', price:0 , discount:0 , description:''}
-  constructor(private store:Store) { }
+@Input() watch:WATCH={name:'',id:'',imgUrl:"", price:0 , discount:0 , description:''}
+  constructor(private store:Store , private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -38,6 +39,7 @@ Fheart=faHeart;
         }
 
         this.store.dispatch(new AddToCart(WatchCart))
+        this._snackBar.open("Just added to your cart", "Ok");
       }
 
     })

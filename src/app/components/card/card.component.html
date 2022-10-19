@@ -1,15 +1,12 @@
-<div class="card-watch">
-<div class="watch-img">
-    <img src="../../../assets/imgs/popular3.png" alt="watch">
-    <span class="heart">
-        <fa-icon [icon]='Fheart'></fa-icon>
-    </span>
-    <div class="add-cart">
-        <button>Add to cart</button>
+<div class="row" routerLink='product/cart'>
+<div class="col-4">
+    <div class="img-item">
+        <img width="100%" height="100%" alt="item menu" [src]="item.imgUrl?item.imgUrl:''">
     </div>
 </div>
-<div class="watch-body">
-    <a [routerLink]="['/details','one']">Thermo Ball Etip Gloves</a>
-    <h3>$1.343</h3>
+<div class="col-8">
+<p class="name-item">{{item.name}}</p>
+<p class="price-item">{{item.price| currency:'USD'}}</p>
 </div>
 </div>
+

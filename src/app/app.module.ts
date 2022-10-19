@@ -22,6 +22,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AccountUserComponent } from './pages/account-user/account-user.component';
 import { DropdownMenuComponent } from './shared/dropdown-menu/dropdown-menu.component';
+import { CardComponent } from './components/card/card.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import { DropdownMenuComponent } from './shared/dropdown-menu/dropdown-menu.comp
     LoginComponent,
     RegisterComponent,
     AccountUserComponent,
-    DropdownMenuComponent
+    DropdownMenuComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { DropdownMenuComponent } from './shared/dropdown-menu/dropdown-menu.comp
     MatButtonModule,
     MatPaginatorModule,
     HttpClientModule,
+    MatSnackBarModule,
     StoreModule.forRoot({Item:Reducer , CartItem:ReducerAddToCart})
   ],
   providers: [],

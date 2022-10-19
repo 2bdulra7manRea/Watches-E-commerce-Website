@@ -6,7 +6,7 @@ import {faLevelUpAlt} from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'UNcommerce';
+  title = 'buy your watch';
   falevel=faLevelUpAlt;
   showUp:boolean=false;
 
@@ -16,7 +16,7 @@ constructor(){
 window.addEventListener('scroll',()=>{
 
 this.showUp=true
-if(window.scrollY<100){
+if(window.scrollY<50){
   this.showUp=false
 }
 

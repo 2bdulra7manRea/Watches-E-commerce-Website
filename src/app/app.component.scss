@@ -43,3 +43,12 @@
 .snap {
   background-color: black;
 }
+
+.header-fixed{
+  position: fixed;
+  width:100%;
+  z-index:10;
+  background: linear-gradient(145deg, #d6d6d4, #fffffd);
+  box-shadow:  20px 20px 60px #cacac9,
+             -20px -20px 60px #ffffff;
+}

@@ -7,18 +7,17 @@
             <div class="box-one">
               <h1>Select Your New Perfect Style</h1>  
               <p>Getting discount with a very splanned materail of design </p>
-                <h6>{{Time}}</h6>
+                <h3 class="time-date" >{{Time}}</h3>
                 <div class="timing">
                     <span>hours: {{hour}}</span>
                     <span>minutes: {{minuts}}</span>
                     <span>second: {{second}}</span>
                 </div>
 
-              <button class="btn w20">
-                  
-                 <div class="oveing"></div>
-                 <a routerLink='/products/list'>Shop now</a>
-                </button>
+
+                <div class="btn-shop-now">
+                 <a routerLink='/products/list'>Shop now</a>   
+                </div>           
             </div>
             
 
@@ -65,11 +64,14 @@
     </div>
 
 
-    <div class="row title-box center m">
-            <button class="btn w30">
-            <div class="oveing"></div>
-            <a routerLink='/products/list'>View More Products</a>
-            </button>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="btn-shop-now">
+                <a style="width:100%" routerLink='/products/list'>View More Products</a>
+            </div>  
+        </div>
+        <div class="col-4"></div>
     </div>
 
 </div>

@@ -54,7 +54,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 [class*="col-"] {
   float: left;
   padding:1px;
-  min-height:300px;
 }
 
 
@@ -120,6 +119,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border: none;
   outline: none;
   padding:10px;
-  background-color: rgb(192, 55, 55);
+  background: linear-gradient(145deg, #292f31, #31383a);
   color: white;
+  border-radius: 10px;
+  text-align: center;
+  width: 50%;
+  text-decoration: none;
+  &:hover{
+      background: linear-gradient(145deg, #d72525, #ff2c2c);
+  }
 }

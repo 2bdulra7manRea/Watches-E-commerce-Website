@@ -1,6 +1,6 @@
 <div class="card-watch">
-    <div class="watch-img">
-        <img src="../../../assets/imgs/popular3.png" alt="watch">
+    <div class="watch-img" >
+        <img  [routerLink]="['/details',watch.id?watch.id:'']" [src]="watch.imgUrl?watch.imgUrl:'../../../assets/imgs/popular3.png'" alt="watch">
         <span class="heart">
             <fa-icon [icon]='Fheart'></fa-icon>
         </span>
@@ -13,3 +13,5 @@
         <h3>{{watch.price| currency:'USD' }}</h3>
     </div>
     </div>
+
+    <!-- ../../../assets/imgs/popular3.png" -->

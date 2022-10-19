@@ -47,6 +47,9 @@ border-radius:10px;
 padding-left:10px;
 }
 
+.title{
+    cursor: pointer;
+}
 .title span{
     color: crimson;
 }
@@ -100,6 +103,9 @@ padding-left:10px;
                     background-color: rgb(235, 235, 235);
                 }
 
+            }
+            .body{
+                padding:10px 0px;
             }
         }
 
