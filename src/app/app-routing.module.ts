@@ -4,7 +4,6 @@ import { AccountUserComponent } from './pages/account-user/account-user.componen
 import { CartProductsComponent } from './pages/cart/cart-products/cart-products.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginComponent } from './pages/login/login.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductDetailsComponent } from './pages/product/product-details/product-details.component';
 import { ProductListComponent } from './pages/product/product-list/product-list.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -19,7 +18,7 @@ const routes: Routes = [
   {path:'products/list',component:ProductListComponent},
   {path:'details/:id' , component:ProductDetailsComponent},
   {path:'product/cart', component:CartProductsComponent},
-  {path:'**', component:NotFoundComponent}
+  {path:'**', component:LoginComponent}
 ];
 
 @NgModule({
